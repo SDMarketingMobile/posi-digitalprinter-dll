@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using POSIDigitalPrinterAPIUtil.Enumerator;
 
 namespace POSIDigitalPrinterAPIUtil.Model
 {
@@ -12,8 +13,8 @@ namespace POSIDigitalPrinterAPIUtil.Model
         [JsonProperty("pid")]
         public int Pid { get; set; }
 
-        [JsonProperty("name")]
-        public string Name { get; set; }
+        [JsonProperty("type")]
+        public AccountType Type { get; set; }
 
         [JsonProperty("number")]
         public int Number { get; set; }
