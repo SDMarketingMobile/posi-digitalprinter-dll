@@ -11,7 +11,10 @@ namespace POSIDigitalPrinterAPIUtil.Controller
         public AccountController(string apiIP, int apiPort) : base(apiIP, apiPort) { }
         public AccountController() : base() { }
 
-        // List accounts
+        /// <summary>
+        /// List accounts
+        /// </summary>
+        /// <returns></returns>
         public async Task<List<Model.Account>> RetrieveAll()
         {
             try
@@ -42,8 +45,12 @@ namespace POSIDigitalPrinterAPIUtil.Controller
                 return null;
             }
         }
-        
-        // Create account
+
+        /// <summary>
+        /// Create account
+        /// </summary>
+        /// <param name="Account"></param>
+        /// <returns></returns>
         public async Task<Model.APICallResponse> CreateAndSync(Model.Account Account)
         {
             Model.APICallResponse callResponse = new Model.APICallResponse();
@@ -62,8 +69,11 @@ namespace POSIDigitalPrinterAPIUtil.Controller
 
             return callResponse;
         }
-        
-        // Get account items completed
+
+        /// <summary>
+        /// Get account items completed
+        /// </summary>
+        /// <returns></returns>
         public async Task<List<Model.Account>> RetrieveWithItemsCompleted()
         {
             try
@@ -82,7 +92,11 @@ namespace POSIDigitalPrinterAPIUtil.Controller
             }
         }
 
-        // Check syncronized items
+        /// <summary>
+        /// Check syncronized items
+        /// </summary>
+        /// <param name="Accounts"></param>
+        /// <returns></returns>
         public async Task<Model.APICallResponse> syncItems(List<Model.Account> Accounts)
         {
             Model.APICallResponse callResponse = new Model.APICallResponse();

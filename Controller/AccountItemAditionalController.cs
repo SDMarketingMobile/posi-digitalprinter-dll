@@ -1,5 +1,4 @@
-﻿using System.Net;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Flurl;
 using Flurl.Http;
@@ -11,7 +10,12 @@ namespace POSIDigitalPrinterAPIUtil.Controller
         public AccountItemAditionalController(string apiIP, int apiPort) : base(apiIP, apiPort) { }
         public AccountItemAditionalController() : base() { }
 
-        // Get account item aditionals
+        /// <summary>
+        /// Get account item aditionals
+        /// </summary>
+        /// <param name="account"></param>
+        /// <param name="item"></param>
+        /// <returns></returns>
         public async Task<List<Model.AccountItemAditional>> RetrieveAditionalsByItem(Model.Account account, Model.AccountItem item)
         {
             List<Model.AccountItemAditional> aditionals = await this.baseURLAPI

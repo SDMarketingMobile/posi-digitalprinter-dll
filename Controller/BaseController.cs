@@ -1,7 +1,4 @@
-﻿using System;
-using Flurl;
-using Flurl.Http;
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 
 namespace POSIDigitalPrinterAPIUtil.Controller
 {
@@ -12,6 +9,11 @@ namespace POSIDigitalPrinterAPIUtil.Controller
 
         protected string baseURLAPI;
 
+        /// <summary>
+        /// Instantiate API controllers based on specified IP and PORT
+        /// </summary>
+        /// <param name="apiIP"></param>
+        /// <param name="apiPort"></param>
         public BaseController(string apiIP, int apiPort)
         {
             this.API_IP = apiIP;
@@ -19,6 +21,11 @@ namespace POSIDigitalPrinterAPIUtil.Controller
             this.ConstructBaseURLAPI();
         }
 
+        /// <summary>
+        /// Instantiate API controllers based on Local Machine Registries
+        /// HKEY_LOCAL_MACHINE\SOFTWARE\Posi\br.com.positecnologia.digitalprinter.api.ip
+        /// HKEY_LOCAL_MACHINE\SOFTWARE\Posi\br.com.positecnologia.digitalprinter.api.port
+        /// </summary>
         public BaseController()
         {
             RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Posi");

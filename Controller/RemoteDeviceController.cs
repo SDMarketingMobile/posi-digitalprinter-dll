@@ -1,5 +1,4 @@
-﻿using System.Net;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Flurl;
 using Flurl.Http;
@@ -11,7 +10,10 @@ namespace POSIDigitalPrinterAPIUtil.Controller
         public RemoteDeviceController(string apiIP, int apiPort) : base(apiIP, apiPort) { }
         public RemoteDeviceController() : base() { }
 
-        // List all remote devices
+        /// <summary>
+        /// List all remote devices
+        /// </summary>
+        /// <returns></returns>
         public async Task<List<Model.RemoteDevice>> RetrieveAll()
         {
             try
@@ -29,7 +31,11 @@ namespace POSIDigitalPrinterAPIUtil.Controller
             }
         }
 
-        // Charge database with remote devices data
+        /// <summary>
+        /// Charge database with remote devices data
+        /// </summary>
+        /// <param name="remoteDevices"></param>
+        /// <returns></returns>
         public async Task<Model.APICallResponse> ReloadAll(List<Model.RemoteDevice> remoteDevices)
         {
             Model.APICallResponse callResponse = new Model.APICallResponse();
@@ -41,29 +47,6 @@ namespace POSIDigitalPrinterAPIUtil.Controller
                     .AppendPathSegment("devices")
                     .AppendPathSegment("reload")
                     .PostJsonAsync(remoteDevices);
-            }
-            catch (FlurlHttpException ex)
-            {
-                callResponse.StatusCode = ex.Call.HttpStatus;
-                callResponse.ResponseBody = ex.Call.Response.Content.ToString();
-            }
-
-            return callResponse;
-        }
-
-        // Link remote device with IP <> WebSocket ID
-        public async Task<Model.APICallResponse> ReferenceDeviceIP(Model.RemoteDevice remoteDevice)
-        {
-            Model.APICallResponse callResponse = new Model.APICallResponse();
-
-            try
-            {
-                await this.baseURLAPI
-                    .AppendPathSegment("remote")
-                    .AppendPathSegment("devices")
-                    .AppendPathSegment("reference")
-                    .AppendPathSegment("ip")
-                    .PutJsonAsync(remoteDevice);
             }
             catch (FlurlHttpException ex)
             {

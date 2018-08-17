@@ -11,7 +11,11 @@ namespace POSIDigitalPrinterAPIUtil.Controller
         public AccountItemController(string apiIP, int apiPort) : base(apiIP, apiPort) { }
         public AccountItemController() : base() { }
 
-        // Get account items
+        /// <summary>
+        /// Get account items
+        /// </summary>
+        /// <param name="account"></param>
+        /// <returns></returns>
         public async Task<List<Model.AccountItem>> RetrieveItemsByAccount(Model.Account account)
         {
             List<Model.AccountItem> items = await this.baseURLAPI
@@ -36,7 +40,12 @@ namespace POSIDigitalPrinterAPIUtil.Controller
             return items;
         }
 
-        // Check begining item preparation
+        /// <summary>
+        /// Check begining item preparation
+        /// </summary>
+        /// <param name="account"></param>
+        /// <param name="accountItem"></param>
+        /// <returns></returns>
         public async Task<Model.APICallResponse> reportBeginPreparation(Model.Account account, Model.AccountItem accountItem)
         {
             Model.APICallResponse callResponse = new Model.APICallResponse();
@@ -62,7 +71,12 @@ namespace POSIDigitalPrinterAPIUtil.Controller
             return callResponse;
         }
 
-        // Check ending item preparation
+        /// <summary>
+        /// Check ending item preparation
+        /// </summary>
+        /// <param name="account"></param>
+        /// <param name="accountItem"></param>
+        /// <returns></returns>
         public async Task<Model.APICallResponse> reportEndPreparation(Model.Account account, Model.AccountItem accountItem)
         {
             Model.APICallResponse callResponse = new Model.APICallResponse();
