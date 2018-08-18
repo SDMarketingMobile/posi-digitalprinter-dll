@@ -2,7 +2,7 @@
 
 namespace POSIDigitalPrinterAPIUtil.Controller
 {
-    public class BaseController
+    public class BaseController : IBaseController
     {
         private string API_IP;
         private int API_PORT;
@@ -61,6 +61,13 @@ namespace POSIDigitalPrinterAPIUtil.Controller
         private void ConstructBaseURLAPI()
         {
             this.baseURLAPI = "http://" + this.API_IP + ":" + this.API_PORT;
+        }
+
+        public void UpdateBaseURLAPI(string apiIP, int apiPort)
+        {
+            this.API_IP = apiIP;
+            this.API_PORT = apiPort;
+            this.ConstructBaseURLAPI();
         }
     }
 }

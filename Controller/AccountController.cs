@@ -6,10 +6,15 @@ using Flurl.Http;
 
 namespace POSIDigitalPrinterAPIUtil.Controller
 {
-    public class AccountController : BaseController
+    public class AccountController : BaseController, IBaseController
     {
         public AccountController(string apiIP, int apiPort) : base(apiIP, apiPort) { }
         public AccountController() : base() { }
+
+        public new void UpdateBaseURLAPI(string apiIP, int apiPort)
+        {
+            base.UpdateBaseURLAPI(apiIP, apiPort);
+        }
 
         /// <summary>
         /// List accounts
@@ -40,7 +45,7 @@ namespace POSIDigitalPrinterAPIUtil.Controller
 
                 return accounts;
             }
-            catch (FlurlHttpException ex)
+            catch (FlurlHttpException)
             {
                 return null;
             }
@@ -86,7 +91,7 @@ namespace POSIDigitalPrinterAPIUtil.Controller
 
                 return accounts;
             }
-            catch (FlurlHttpException ex)
+            catch (FlurlHttpException)
             {
                 return null;
             }

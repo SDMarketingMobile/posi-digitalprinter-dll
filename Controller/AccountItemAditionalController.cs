@@ -10,6 +10,11 @@ namespace POSIDigitalPrinterAPIUtil.Controller
         public AccountItemAditionalController(string apiIP, int apiPort) : base(apiIP, apiPort) { }
         public AccountItemAditionalController() : base() { }
 
+        public new void UpdateBaseURLAPI(string apiIP, int apiPort)
+        {
+            base.UpdateBaseURLAPI(apiIP, apiPort);
+        }
+
         /// <summary>
         /// Get account item aditionals
         /// </summary>

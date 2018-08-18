@@ -10,6 +10,11 @@ namespace POSIDigitalPrinterAPIUtil.Controller
         public RemoteDeviceController(string apiIP, int apiPort) : base(apiIP, apiPort) { }
         public RemoteDeviceController() : base() { }
 
+        public new void UpdateBaseURLAPI(string apiIP, int apiPort)
+        {
+            base.UpdateBaseURLAPI(apiIP, apiPort);
+        }
+
         /// <summary>
         /// List all remote devices
         /// </summary>
@@ -25,7 +30,7 @@ namespace POSIDigitalPrinterAPIUtil.Controller
 
                 return remoteDevices;    
             }
-            catch (FlurlHttpException ex)
+            catch (FlurlHttpException)
             {
                 return null;
             }
