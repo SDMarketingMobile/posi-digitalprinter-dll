@@ -1,4 +1,0 @@
-C:\Users\lukas\Desktop\POSIDigitalPrinter\POSIDigitalPrinterAPIUtil\obj\Debug\netstandard1.2\POSIDigitalPrinterAPIUtil.csprojAssemblyReference.cache
-C:\Users\lukas\Desktop\POSIDigitalPrinter\POSIDigitalPrinterAPIUtil\obj\Debug\netstandard1.2\POSIDigitalPrinterAPIUtil.csproj.CoreCompileInputs.cache
-C:\Users\lukas\Desktop\POSIDigitalPrinter\POSIDigitalPrinterAPIUtil\obj\Debug\netstandard1.2\POSIDigitalPrinterAPIUtil.AssemblyInfoInputs.cache
-C:\Users\lukas\Desktop\POSIDigitalPrinter\POSIDigitalPrinterAPIUtil\obj\Debug\netstandard1.2\POSIDigitalPrinterAPIUtil.AssemblyInfo.cs

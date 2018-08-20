@@ -1,9 +1,0 @@
-C:\Users\lukas\Desktop\POSIDigitalPrinter\POSIDigitalPrinterAPIUtil\bin\Debug\netstandard2.0\POSIDigitalPrinterAPIUtil.deps.json
-C:\Users\lukas\Desktop\POSIDigitalPrinter\POSIDigitalPrinterAPIUtil\bin\Debug\netstandard2.0\POSIDigitalPrinterAPIUtil.dll
-C:\Users\lukas\Desktop\POSIDigitalPrinter\POSIDigitalPrinterAPIUtil\bin\Debug\netstandard2.0\POSIDigitalPrinterAPIUtil.pdb
-C:\Users\lukas\Desktop\POSIDigitalPrinter\POSIDigitalPrinterAPIUtil\obj\Debug\netstandard2.0\POSIDigitalPrinterAPIUtil.csprojAssemblyReference.cache
-C:\Users\lukas\Desktop\POSIDigitalPrinter\POSIDigitalPrinterAPIUtil\obj\Debug\netstandard2.0\POSIDigitalPrinterAPIUtil.csproj.CoreCompileInputs.cache
-C:\Users\lukas\Desktop\POSIDigitalPrinter\POSIDigitalPrinterAPIUtil\obj\Debug\netstandard2.0\POSIDigitalPrinterAPIUtil.AssemblyInfoInputs.cache
-C:\Users\lukas\Desktop\POSIDigitalPrinter\POSIDigitalPrinterAPIUtil\obj\Debug\netstandard2.0\POSIDigitalPrinterAPIUtil.AssemblyInfo.cs
-C:\Users\lukas\Desktop\POSIDigitalPrinter\POSIDigitalPrinterAPIUtil\obj\Debug\netstandard2.0\POSIDigitalPrinterAPIUtil.dll
-C:\Users\lukas\Desktop\POSIDigitalPrinter\POSIDigitalPrinterAPIUtil\obj\Debug\netstandard2.0\POSIDigitalPrinterAPIUtil.pdb
