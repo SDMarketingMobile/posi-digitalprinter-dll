@@ -1,7 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Net.Sockets;
 using System.Threading.Tasks;
+using Ether.Network.Client;
+using Ether.Network.Packets;
 using Flurl;
 using Flurl.Http;
+using POSIDigitalPrinterAPIUtil.Socket;
 
 namespace POSIDigitalPrinterAPIUtil.Controller
 {
@@ -60,6 +64,28 @@ namespace POSIDigitalPrinterAPIUtil.Controller
             }
 
             return callResponse;
+        }
+
+        /// <summary>
+        /// Test connection with remote device
+        /// </summary>
+        /// <param name="remoteDevice"></param>
+        /// <returns></returns>
+        public bool TestConnection(Model.RemoteDevice remoteDevice)
+        {
+            bool connected = false;
+
+            var client = new SocketClient(remoteDevice.DeviceIP, remoteDevice.DevicePort);
+            client.Connect();
+
+            connected = client.IsConnected;
+
+            if(client.IsConnected)
+            {
+                client.Disconnect();
+            }
+
+            return connected;
         }
     }
 }

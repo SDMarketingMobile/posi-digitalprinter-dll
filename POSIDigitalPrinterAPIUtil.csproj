@@ -10,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Ether.Network" Version="3.0.0" />
     <PackageReference Include="Flurl" Version="2.8.0" />
     <PackageReference Include="Flurl.Http" Version="2.3.2" />
     <PackageReference Include="Microsoft.Win32.Registry" Version="4.5.0" />

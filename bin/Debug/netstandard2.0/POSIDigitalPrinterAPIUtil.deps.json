@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "31d784c67f2a19c6f17a235d3aefd20d2b28fdd2"
+    "signature": "8c8e14ba3e19758fa545e04616dfdf3988ccf09b"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "POSIDigitalPrinterAPIUtil/1.0.0": {
         "dependencies": {
+          "Ether.Network": "3.0.0",
           "Flurl": "2.8.0",
           "Flurl.Http": "2.3.2",
           "Microsoft.Win32.Registry": "4.5.0",
@@ -17,6 +18,11 @@
         },
         "runtime": {
           "POSIDigitalPrinterAPIUtil.dll": {}
+        }
+      },
+      "Ether.Network/3.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/Ether.Network.dll": {}
         }
       },
       "Flurl/2.8.0": {
@@ -106,6 +112,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Ether.Network/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GdvdWe44NooiW4Ir6NrAbLF1kN7p5XOnWMSc4Dr8y8K1MF7sUFydR90p5uwHJQDNy9KOEpKEHK9/x6LhsPgFIw==",
+      "path": "ether.network/3.0.0",
+      "hashPath": "ether.network.3.0.0.nupkg.sha512"
     },
     "Flurl/2.8.0": {
       "type": "package",
